@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.entropycalculator">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Decimal2Input"></activity>
+        <activity android:name=".Decimal3Input" />
+        <activity android:name=".Decimal4Input" />
+        <activity android:name=".Decimal5Input" />
+        <activity android:name=".Decimal6Input" />
+        <activity android:name=".Decimal7Input" />
+        <activity android:name=".Fraction2Input" />
+        <activity android:name=".Fraction3Input" />
+        <activity android:name=".Fraction4Input" />
+        <activity android:name=".Fraction5Input" />
+        <activity android:name=".Fraction6Input" />
+        <activity android:name=".Fraction7Input" />
+        <activity android:name=".Display" />
+        <activity android:name=".FractionTotal" />
+        <activity android:name=".Decimal8Input" />
+        <activity android:name=".Fraction8Input" />
+        <activity android:name=".InputType" />
+        <activity android:name=".MainActivity"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
