@@ -172,7 +172,7 @@ public class Fraction3Input extends AppCompatActivity {
             calulate();
 
 
-            if((a+b+c)/total == 1) {
+            if((a+b+c)/total == 1.0) {
                 intent1 = new Intent(com.example.entropycalculator.Fraction3Input.this, Display.class);
                 intent1.putExtra("informationValue", arrayList);
                 intent1.putExtra("entropyValue", entropyList);

@@ -95,11 +95,16 @@ public class Decimal3Input extends AppCompatActivity {
 
             calulate();
 
+            if((a+b+c) == 1.0) {
                 intent1 = new Intent(Decimal3Input.this, Display.class);
                 intent1.putExtra("informationValue", arrayList);
                 intent1.putExtra("entropyValue", entropyList);
                 intent1.putExtra("noOfSymbols", no);
                 startActivity(intent1);
+            }
+            else{
+                tempError.setVisibility(View.VISIBLE);
+            }
 
         }
         catch(Exception e){

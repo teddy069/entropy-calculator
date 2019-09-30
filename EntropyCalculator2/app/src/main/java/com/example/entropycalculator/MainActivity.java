@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-                if(no >= 2 && no <= 8) {
+                if(no >= 2 && no <= 10) {
                     intent = new Intent(MainActivity.this, InputType.class);
                     intent.putExtra("noOfSymbols", no);
                     startActivity(intent);

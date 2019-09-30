@@ -66,11 +66,11 @@ public class Decimal5Input extends AppCompatActivity {
 
 
     private void initiateAllElements(){
-        de_5_edit1 = findViewById(R.id.de_6_edit1);
-        de_5_edit2 = findViewById(R.id.de_6_edit2);
-        de_5_edit3 = findViewById(R.id.de_6_edit3);
-        de_5_edit4 = findViewById(R.id.de_6_edit4);
-        de_5_edit5 = findViewById(R.id.de_6_edit5);
+        de_5_edit1 = findViewById(R.id.de_5_edit1);
+        de_5_edit2 = findViewById(R.id.de_5_edit2);
+        de_5_edit3 = findViewById(R.id.de_5_edit3);
+        de_5_edit4 = findViewById(R.id.de_5_edit4);
+        de_5_edit5 = findViewById(R.id.de_5_edit5);
         //de_5_edit6 = findViewById(R.id.de_6_edit6);
         //de_7_edit7 = findViewById(R.id.de_7_edit7);
         //de_8_edit8 = findViewById(R.id.de_8_edit8);
@@ -94,12 +94,16 @@ public class Decimal5Input extends AppCompatActivity {
 
 
             calulate();
-
+            if((a+b+c+d+e) == 1.0) {
                 intent1 = new Intent(Decimal5Input.this, Display.class);
                 intent1.putExtra("informationValue", arrayList);
                 intent1.putExtra("entropyValue", entropyList);
                 intent1.putExtra("noOfSymbols", no);
                 startActivity(intent1);
+        }
+            else{
+            tempError.setVisibility(View.VISIBLE);
+        }
 
         }
         catch(Exception e){

@@ -81,6 +81,18 @@ public class InputType extends AppCompatActivity {
                     intent1.putExtra("noOfSymbols", no);
                     startActivity(intent1);
                 }
+
+                if(no == 9) {
+                    Intent intent1 = new Intent(InputType.this, Decimal9Input.class);
+                    intent1.putExtra("noOfSymbols", no);
+                    startActivity(intent1);
+                }
+
+                if(no == 10) {
+                    Intent intent1 = new Intent(InputType.this, Decimal10Input.class);
+                    intent1.putExtra("noOfSymbols", no);
+                    startActivity(intent1);
+                }
             }
         });
     }

@@ -16,6 +16,7 @@ public class Decimal2Input extends AppCompatActivity {
 
     EditText de_2_edit1;
     EditText de_2_edit2;
+
     //EditText de_2_edit3;
     //EditText de_4_edit4;
     //EditText de_4_edit5;
@@ -23,6 +24,7 @@ public class Decimal2Input extends AppCompatActivity {
     //EditText de_6_edit7;
     //EditText de_7_edit8;
     TextView tempError;
+    TextView easterEgg;
 
     double a=0.0d,b=0.0d,c=0.0d,d=0.0d,e=0.0d,f=0.0d,g=0.0d,h=0.0d;
     DecimalFormat df2 = new DecimalFormat("#.###");
@@ -48,6 +50,13 @@ public class Decimal2Input extends AppCompatActivity {
 
         intent = getIntent();
         no = intent.getIntExtra("noOfSymbols", -1);
+        easterEgg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(Decimal2Input.this,EasterEgg.class );
+                startActivity(intent1);
+            }
+        });
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,9 +70,6 @@ public class Decimal2Input extends AppCompatActivity {
     }
 
 
-
-
-
     private void initiateAllElements(){
         de_2_edit1 = findViewById(R.id.de_2_edit1);
         de_2_edit2 = findViewById(R.id.de_2_edit2);
@@ -73,7 +79,7 @@ public class Decimal2Input extends AppCompatActivity {
         //de_5_edit6 = findViewById(R.id.de_6_edit6);
         //de_7_edit7 = findViewById(R.id.de_7_edit7);
         //de_8_edit8 = findViewById(R.id.de_8_edit8);
-
+        easterEgg = findViewById(R.id.easter_egg);
         tempError = findViewById(R.id.de_error2);
         button = findViewById(R.id.de_2_next);
     }
@@ -93,12 +99,16 @@ public class Decimal2Input extends AppCompatActivity {
 
 
             calulate();
-
+            if((a+b) == 1.0) {
             intent1 = new Intent(Decimal2Input.this, Display.class);
             intent1.putExtra("informationValue",arrayList);
             intent1.putExtra("entropyValue",entropyList);
             intent1.putExtra("noOfSymbols", no);
             startActivity(intent1);
+        }
+            else{
+            tempError.setVisibility(View.VISIBLE);
+        }
 
         }
         catch(Exception e){

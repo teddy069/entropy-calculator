@@ -173,7 +173,7 @@ public class Fraction7Input extends AppCompatActivity {
 
 
             calulate();
-            if((a+b+c+d+e+f+g)/total == 1) {
+            if((a+b+c+d+e+f+g)/total == 1.0) {
                 intent1 = new Intent(Fraction7Input.this, Display.class);
                 intent1.putExtra("informationValue", arrayList);
                 intent1.putExtra("entropyValue", entropyList);

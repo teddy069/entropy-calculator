@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Decimal2Input"></activity>
+        <activity android:name=".EasterEgg"></activity>
+        <activity android:name=".Decimal9Input" />
+        <activity android:name=".Decimal10Input" />
+        <activity android:name=".Fraction10Input" />
+        <activity android:name=".Fraction9Input" />
+        <activity android:name=".Decimal2Input" />
         <activity android:name=".Decimal3Input" />
         <activity android:name=".Decimal4Input" />
         <activity android:name=".Decimal5Input" />
@@ -26,8 +31,7 @@
         <activity android:name=".Decimal8Input" />
         <activity android:name=".Fraction8Input" />
         <activity android:name=".InputType" />
-        <activity android:name=".MainActivity"
-            >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

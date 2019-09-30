@@ -88,6 +88,20 @@ public class FractionTotal extends AppCompatActivity {
                     startActivity(intent1);
                 }
 
+                if(no == 9) {
+                    Intent intent1 = new Intent(FractionTotal.this, Fraction9Input.class);
+                    intent1.putExtra("noOfSymbols", no);
+                    intent1.putExtra("fractionTotal", total);
+                    startActivity(intent1);
+                }
+
+                if(no == 10) {
+                    Intent intent1 = new Intent(FractionTotal.this, Fraction10Input.class);
+                    intent1.putExtra("noOfSymbols", no);
+                    intent1.putExtra("fractionTotal", total);
+                    startActivity(intent1);
+                }
+
 
             }
         });
